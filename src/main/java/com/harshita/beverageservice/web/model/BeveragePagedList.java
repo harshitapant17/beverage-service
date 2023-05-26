@@ -1,4 +1,4 @@
-package com.harshita.beverageservice.model;
+package com.harshita.beverageservice.web.model;
 
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;

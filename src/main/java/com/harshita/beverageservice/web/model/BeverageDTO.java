@@ -1,4 +1,4 @@
-package com.harshita.beverageservice.model;
+package com.harshita.beverageservice.web.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

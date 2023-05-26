@@ -1,4 +1,4 @@
-package com.harshita.beverageservice.model;
+package com.harshita.beverageservice.web.model;
 
 public enum BeverageSizeEnum {
     SMALL, MEDIUM, LARGE
