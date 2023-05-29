@@ -3,6 +3,7 @@ package com.harshita.beverageservice.web.controller;
 import com.harshita.beverageservice.web.model.BeverageDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -18,7 +19,7 @@ public class BeverageController {
     }
     
     @PostMapping
-    public ResponseEntity saveNewBeverage(@RequestBody BeverageDTO newBeverage)
+    public ResponseEntity saveNewBeverage(@RequestBody @Validated BeverageDTO newBeverage)
     {
 //        HttpHeaders headers = new HttpHeaders();
 //        headers.set();
@@ -27,7 +28,7 @@ public class BeverageController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity updateBeverageById(@PathVariable("id") UUID id, @RequestBody BeverageDTO beverage)
+    public ResponseEntity updateBeverageById(@PathVariable("id") UUID id, @RequestBody @Validated BeverageDTO beverage)
     {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
