@@ -44,6 +44,6 @@ public class BeverageLoader implements CommandLineRunner {
                     .build());
         }
 
-        //System.out.println("Loaded Beverages: "+beverageRepository.count());
+        System.out.println("Loaded Beverages: "+beverageRepository.count());
     }
 }
