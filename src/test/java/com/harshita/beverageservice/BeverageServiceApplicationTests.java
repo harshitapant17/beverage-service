@@ -29,7 +29,7 @@ class BeverageServiceApplicationTests {
 
 	@Test
 	void getBeverageById() throws Exception{
-		mockMvc.perform(get("/api/v1/beverage" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
+		mockMvc.perform(get("/api/v1/beverage/" + UUID.randomUUID().toString()).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 	}
 
@@ -49,7 +49,7 @@ class BeverageServiceApplicationTests {
 		BeverageDTO beverageDTO = getValidBeverageDto();
 		String beverageDtoJson = objectMapper.writeValueAsString(beverageDTO);
 
-		mockMvc.perform(put("/api/v1/beverage"+UUID.randomUUID().toString() )
+		mockMvc.perform(put("/api/v1/beverage/"+UUID.randomUUID().toString() )
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(beverageDtoJson))
 				.andExpect(status().isNoContent());
