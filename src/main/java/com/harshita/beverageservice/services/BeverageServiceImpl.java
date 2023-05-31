@@ -6,10 +6,12 @@ import com.harshita.beverageservice.repositories.BeverageRepository;
 import com.harshita.beverageservice.web.controller.NotFoundException;
 import com.harshita.beverageservice.web.model.BeverageDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @RequiredArgsConstructor
+@Service
 public class BeverageServiceImpl implements BeverageService {
 
     private final BeverageRepository repository;

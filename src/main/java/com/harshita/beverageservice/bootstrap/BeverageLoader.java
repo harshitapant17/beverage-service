@@ -10,6 +10,11 @@ import java.math.BigDecimal;
 @Component
 public class BeverageLoader implements CommandLineRunner {
 
+    public static final String BEVERAGE1_UPC="06312324200036";
+    public static final String BEVERAGE2_UPC="06312324200019";
+    public static final String BEVERAGE3_UPC="003783375213";
+
+
     private final BeverageRepository beverageRepository;
 
     public BeverageLoader(BeverageRepository beverageRepository) {
@@ -30,7 +35,7 @@ public class BeverageLoader implements CommandLineRunner {
                     .beverageStyle("Regular")
                     .quantityToBrew(200)
                     .minOnHand(12)
-                    .upc(3370100000001L)
+                    .upc(BEVERAGE1_UPC)
                     .price(new BigDecimal("250"))
                     .build());
 
@@ -39,8 +44,17 @@ public class BeverageLoader implements CommandLineRunner {
                     .beverageStyle("Regular")
                     .quantityToBrew(200)
                     .minOnHand(12)
-                    .upc(3370100000002L)
+                    .upc(BEVERAGE2_UPC)
                     .price(new BigDecimal("310"))
+                    .build());
+
+            beverageRepository.save(Beverage.builder()
+                    .beverageName("Orange Passion")
+                    .beverageStyle("Regular")
+                    .quantityToBrew(200)
+                    .minOnHand(12)
+                    .upc(BEVERAGE3_UPC)
+                    .price(new BigDecimal("220"))
                     .build());
         }
 
